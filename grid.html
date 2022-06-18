@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .item1 { grid-area: header;
+                 background-color: orangered;   
+        }
+        .item2 { grid-area: menu;
+                 background-color: rgb(255, 187, 0);
+        }
+        .item3 { grid-area: main; 
+                 background-color: rgb(3, 184, 57);   
+        }
+        .item4 { grid-area: right; 
+                 background-color: rgb(0, 174, 255);
+        }
+        .item5 { grid-area: footer; 
+                 background-color: rgb(0, 174, 255);
+        }
+        
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'header header header header header menu menu menu'
+            'main main main right right right right right'
+            'main main main footer footer footer footer footer';
+          gap: 15px;
+          background-color: #05233b;
+          padding: 60px;
+          height: 70vh;
+        }
+        
+        .grid-container > div {
+          /* background-color: rgba(255, 255, 255, 0.8); */
+          text-align: center;
+          padding: 20px 0;
+          font-size: 30px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        
+        <div class="grid-container">
+          <div class="item1"></div>
+          <div class="item2"></div>
+          <div class="item3"></div>  
+          <div class="item4"></div>
+          <div class="item5"></div>
+        </div>
+        
+        </body>
+</html>
